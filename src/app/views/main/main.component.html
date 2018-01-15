@@ -1,0 +1,12 @@
+<table *ngIf="templates">
+  <tr>
+    <th>Name</th>
+    <th>Modified</th>
+  </tr>
+  <tr *ngFor="let template of templates">
+    <td>
+      <a [routerLink]="['template', template.id]">{{template.name}}</a>
+    </td>
+    <td>{{getDate(template.modified)}}</td>
+  </tr>
+</table>

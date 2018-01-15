@@ -1,0 +1,11 @@
+<div class="template-area"
+     *ngIf="template"
+     [innerHtml]="template.template"
+     (click)="onClick($event)">
+
+</div>
+<br>
+<div *ngIf="selectedElement" class="panel">
+  Text: <input [value]="selectedElement.innerText" #textInput (change)="changeText(textInput.value)"><br>
+  Font size: <input [value]="selectedElement.style.fontSize || '16px'" #fontSizeInput (change)="changeSize(fontSizeInput.value)">
+</div>

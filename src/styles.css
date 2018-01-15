@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.editable{
+  border: 1px solid green;
+  width: 100%;
+}
+
+.container{
+  display: flex;
+  width: 100%;
+}
+
+.selected{
+  border: 2px solid blue;
+}

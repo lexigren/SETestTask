@@ -22,10 +22,9 @@ export class TemplateComponent {
     this.storage
       .getTemplates(this.id)
       .subscribe(result => {
-        result.template = this.sanitizer.bypassSecurityTrustHtml(result.template);
         this.template = {
           id: result.id,
-          template: result.template,
+          template: this.sanitizer.bypassSecurityTrustHtml(result.template),
           modified: result.modified
         };
       });
